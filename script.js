@@ -553,7 +553,7 @@ onload = function () {
   document.onkeyup = keyup;
   document.onclick = click;
   // ゲームループの設定 60FPS
-  setInterval("gameloop()", 200);
+  setInterval("gameloop()", 16);
 };
 
 // 初期化
