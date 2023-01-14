@@ -260,7 +260,7 @@ class Actor extends Splite {
       // コイン移動
       this.map.item_layout[this.posy][this.posx] = 0;
       point = this.map.random_emptysquare();
-      item_list.push(new Item("コイン", "./img/コイン.png", point[0], point[1], g, map));
+      item_list.push(new Item("コイン", "./img/coin.png", point[0], point[1], g, map));
 
       // テキスト出力
       //set_text(this.collected_item.map(item => item.name)); // 取得アイテム名表示
@@ -559,14 +559,14 @@ onload = function () {
 // 初期化
 function init() {
   Object.assign(before_key, key_state); // 入力初期化
-  map = new Map("./img/toire.png", "./img/takibi.png", g);
+  map = new Map("./img/toiletpaper.png", "./img/bonfile.png", g);
   player = new Actor("ぷれいや", "./img/amongus_R.png", 2, 4, g, map);
   actor_list.push(player);
-  actor_list.push(new Enemy("スライム", "./img/suraimu.png", 1, 1, g, map));
-  actor_list.push(new Enemy("猫", "./img/neko.png", 3, 3, g, map));
+  actor_list.push(new Enemy("スライム", "./img/slime.png", 1, 1, g, map));
+  actor_list.push(new Enemy("猫", "./img/cat.png", 3, 3, g, map));
   actor_list.push(new Enemy("ポチタ", "./img/pochita.png", 4, 1, g, map));
-  item_list.push(new Item("コイン", "./img/koin.png", 1, 3, g, map));
-  item_list.push(new Item("リンゴ", "./img/ringo.png", 3, 1, g, map));
+  item_list.push(new Item("コイン", "./img/coin.png", 1, 3, g, map));
+  item_list.push(new Item("リンゴ", "./img/apple.png", 3, 1, g, map));
   camera = new Camera(0, 0, g);
 
   actor_list[1].action = 3;
@@ -786,12 +786,12 @@ function set_text(text) {
 
 // アタックエフェクト
 function effect_attack(x, y) {
-  effect_list.push(new Effect("./img/こぶし.png", x, y, g));
+  effect_list.push(new Effect("./img/fist.png", x, y, g));
 }
 
 // アタック予備動作エフェクト
 function effect_pre_attack(x, y, direction) {
-  let effect = new Effect("./img/こぶし.png", x, y, g);
+  let effect = new Effect("./img/fist.png", x, y, g);
   effect.image_gain = 0.5;
   effect.offsety = effect.height / 3 * (direction.y + 1);
   effect.offsetx = effect.width / 3 * (direction.x + 1);
@@ -801,7 +801,7 @@ function effect_pre_attack(x, y, direction) {
 
 // ダメージエフェクト
 function effect_damage(x, y) {
-  effect_list.push(new Effect("./img/ダメージ.png", x, y, g));
+  effect_list.push(new Effect("./img/damage.png", x, y, g));
 }
 
 // 入力
