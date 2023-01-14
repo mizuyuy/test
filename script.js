@@ -559,14 +559,14 @@ onload = function () {
 // 初期化
 function init() {
   Object.assign(before_key, key_state); // 入力初期化
-  map = new Map("./img/トイレットペーパー.png", "./img/焚火.png", g);
+  map = new Map("./img/toire.png", "./img/takibi.png", g);
   player = new Actor("ぷれいや", "./img/amongus_R.png", 2, 4, g, map);
   actor_list.push(player);
-  actor_list.push(new Enemy("スライム", "./img/スライム.png", 1, 1, g, map));
-  actor_list.push(new Enemy("猫", "./img/猫.png", 3, 3, g, map));
-  actor_list.push(new Enemy("ポチタ", "./img/ポチタ.png", 4, 1, g, map));
-  item_list.push(new Item("コイン", "./img/コイン.png", 1, 3, g, map));
-  item_list.push(new Item("リンゴ", "./img/リンゴ.png", 3, 1, g, map));
+  actor_list.push(new Enemy("スライム", "./img/suraimu.png", 1, 1, g, map));
+  actor_list.push(new Enemy("猫", "./img/neko.png", 3, 3, g, map));
+  actor_list.push(new Enemy("ポチタ", "./img/pochita.png", 4, 1, g, map));
+  item_list.push(new Item("コイン", "./img/koin.png", 1, 3, g, map));
+  item_list.push(new Item("リンゴ", "./img/ringo.png", 3, 1, g, map));
   camera = new Camera(0, 0, g);
 
   actor_list[1].action = 3;
